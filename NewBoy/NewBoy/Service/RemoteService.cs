@@ -1,4 +1,5 @@
 ﻿using NewBoy.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,24 @@ namespace NewBoy.Service
             {
                 passvalue ="h" ;
             }
+
+            //post = string.Empty;
+            //using (var httpClient = CreateClient())
+            //{
+            //    var response = await httpClient.GetAsync(passvalue);
+            //    if (response.IsSuccessStatusCode)
+            //    {
+            //        var json = await response.Content.ReadAsStringAsync();
+            //        if (!string.IsNullOrWhiteSpace(json))
+            //        {
+            //            var tempe = await Task.Run(() =>
+            //                JsonConvert.DeserializeObject<Profile>(json)
+            //             ).ConfigureAwait(false);
+            //            post = tempe;
+            //        }
+            //    }
+            //}
+            //return post;
         }
         
     }

@@ -19,19 +19,19 @@ namespace NewBoy.ViewModels
             _navigationService = navigationService;
             param.ptype = "Login";
         }
-        private string _userName;
-        public string UserName
+        private string _loginEmail;
+        public string LoginEmail
         {
-            get { return _userName; }
-            set { SetProperty(ref _userName, value);
+            get { return _loginEmail; }
+            set { SetProperty(ref _loginEmail, value);
                 RaisePropertyChanged();
             }
         }
-        private string _password;
-        public string Password
+        private string _loginPassword;
+        public string LoginPassword
         {
-            get { return _password; }
-            set { SetProperty(ref _password, value);
+            get { return _loginPassword; }
+            set { SetProperty(ref _loginPassword, value);
                 RaisePropertyChanged();
             }
         }
@@ -43,11 +43,18 @@ namespace NewBoy.ViewModels
                 return loginButtonAction;
             }
         }
+        private DelegateCommand signupClickAction { get; set; }
+        public DelegateCommand SignupClickAction
+        {
+            get { return signupClickAction = signupClickAction ?? new DelegateCommand(() => {
+                _navigationService.NavigateAsync("SignUp");
+            }); }
+        }
 
         private async Task GetLoginResponse()
         {
             var remoteResult = new RemoteService();
-            var result = await remoteResult.GetRemoteService(param);
+           // var result = await remoteResult.GetRemoteService(param);
             
         }
     }
