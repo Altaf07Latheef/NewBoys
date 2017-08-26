@@ -19,6 +19,8 @@ namespace NewBoy
         {
             Container.RegisterTypeForNavigation<NavigationPage>();
             Container.RegisterTypeForNavigation<MainPage>();
+            Container.RegisterTypeForNavigation<SignUp>();
+            Container.RegisterTypeForNavigation<Login>();
         }
     }
 }
