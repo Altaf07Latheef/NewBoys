@@ -12,7 +12,7 @@ namespace NewBoy
         {
             InitializeComponent();
 
-            NavigationService.NavigateAsync("NavigationPage/SignUp");
+            NavigationService.NavigateAsync("NavigationPage/Profile");
         }
 
         protected override void RegisterTypes()

@@ -7,10 +7,13 @@
 
  <AbsoluteLayout VerticalOptions="FillAndExpand"
                     HorizontalOptions="FillAndExpand">
-			<Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
-            Source="homebg.png" Aspect="AspectFill"/>
-
-
-
+	<StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" VerticalOptions="Start">
+		
+        <Label Text= "Edit Profile" FontSize="25"/> 
+		<Entry Placeholder="First Name" Margin="20,10,20,0" HorizontalOptions="FillAndExpand"/>
+		<Entry Placeholder="Last Name" Margin="20,0,20,0" HorizontalOptions="FillAndExpand"/>
+		<Editor Margin="20,0,20,0" HorizontalOptions="FillAndExpand"/>
+		<Button Text="Save" HorizontalOptions="Center"/>
+	</StackLayout>
  </AbsoluteLayout>
 </ContentPage>
