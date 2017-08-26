@@ -1,8 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="NewBoy.Views.EditProfile">
-  
+
+ <AbsoluteLayout VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand">
+	<StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" VerticalOptions="Start">
+		
+        <Label Text= "Edit Profile" FontSize="25"/> 
+		<Entry Placeholder="First Name" Margin="20,10,20,0" HorizontalOptions="FillAndExpand"/>
+		<Entry Placeholder="Last Name" Margin="20,0,20,0" HorizontalOptions="FillAndExpand"/>
+		<Editor Margin="20,0,20,0" HorizontalOptions="FillAndExpand"/>
+		<Button Text="Save" HorizontalOptions="Center"/>
+	</StackLayout>
+ </AbsoluteLayout>
 </ContentPage>
