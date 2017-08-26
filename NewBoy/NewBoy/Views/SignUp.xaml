@@ -1,8 +1,28 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
-             x:Class="NewBoy.Views.SignUp">
-  
+             x:Class="NewBoy.Views.SignUp"
+	NavigationPage.HasNavigationBar="false">
+
+	<AbsoluteLayout VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand">
+			<Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+            Source="homebg.png" Aspect="AspectFill"/>
+            <StackLayout HorizontalOptions="Center" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,0.5">
+				<Image Source="Logo.png" HeightRequest="220" WidthRequest="220"/>
+				<Label HorizontalOptions="Center" FontSize="25" Text = "Sign Up"/>
+			</StackLayout>
+ <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" VerticalOptions="Center">
+		<Entry Placeholder="Enter username" Margin="20,0,20,0" HorizontalOptions="FillAndExpand"/>
+		<Entry Placeholder="Enter password" Margin="20,0,20,0" IsPassword="true" HorizontalOptions="FillAndExpand"/>
+		<Button x:Name="signupButton" Text="Sign Up" HorizontalOptions="Center"/>
+ </StackLayout>	
+
+		
+		
+		
+	</AbsoluteLayout>
+	
 </ContentPage>
