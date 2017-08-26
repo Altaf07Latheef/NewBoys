@@ -20,6 +20,12 @@ namespace NewBoy
             Container.RegisterTypeForNavigation<NavigationPage>();
             Container.RegisterTypeForNavigation<SignUp>();
             Container.RegisterTypeForNavigation<Login>();
+            Container.RegisterTypeForNavigation<Profile>();
+            Container.RegisterTypeForNavigation<Goals>();
+            Container.RegisterTypeForNavigation<SetGoals>();
+            Container.RegisterTypeForNavigation<ContactMembers>();
+            Container.RegisterTypeForNavigation<GoalDetails>();
+            Container.RegisterTypeForNavigation<EditProfile>();
         }
     }
 }

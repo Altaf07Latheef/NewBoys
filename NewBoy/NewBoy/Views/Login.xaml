@@ -12,14 +12,18 @@
 		<Image Source="Logo.png" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,0.5" HeightRequest="200" WidthRequest="200"/>
 	
  <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" VerticalOptions="Center">
-		<Entry Placeholder="Enter username" Margin="20,0,20,0" HorizontalOptions="FillAndExpand"/>
-		<Entry Placeholder="Enter password" Margin="20,0,20,0" IsPassword="true" HorizontalOptions="FillAndExpand"/>
-		<Button Text="Login" HorizontalOptions="Center"/>
+		<Entry Text="{Binding LoginEmail}" Placeholder="Enter username" Margin="20,0,20,0" HorizontalOptions="FillAndExpand"/>
+		<Entry Text="{Binding LoginPassword}" Placeholder="Enter password" Margin="20,0,20,0" IsPassword="true" HorizontalOptions="FillAndExpand"/>
+		<Button Text="Login" HorizontalOptions="Center" Command="{Binding LoginButtonAction}"/>
 
 	<StackLayout Orientation="Horizontal" HorizontalOptions="Center">
 			<Label Text ="Not a BackPacker yet?" />
-			<Label x:Name="SignUpLabel" Text="Sign Up" TextColor="Blue"/>
-	</StackLayout>
+                <Label x:Name="SignUpLabel" Text="Sign Up" TextColor="Blue">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding}"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
  </StackLayout>	
 </AbsoluteLayout>  
 </ContentPage>
