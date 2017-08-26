@@ -2,9 +2,9 @@
 
 namespace NewBoy.Views
 {
-    public partial class MainPage : ContentPage
+    public partial class SignUp : ContentPage
     {
-        public MainPage()
+        public SignUp()
         {
             InitializeComponent();
         }
