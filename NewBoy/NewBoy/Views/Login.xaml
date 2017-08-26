@@ -1,8 +1,25 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
-             x:Class="NewBoy.Views.Login">
-  
+             x:Class="NewBoy.Views.Login"
+	NavigationPage.HasNavigationBar="false">
+<AbsoluteLayout VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand">
+			<Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+            Source="homebg.png" Aspect="AspectFill"/>
+		<Image Source="Logo.png" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,0.5" HeightRequest="200" WidthRequest="200"/>
+	
+ <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" VerticalOptions="Center">
+		<Entry Placeholder="Enter username" Margin="20,0,20,0" HorizontalOptions="FillAndExpand"/>
+		<Entry Placeholder="Enter password" Margin="20,0,20,0" IsPassword="true" HorizontalOptions="FillAndExpand"/>
+		<Button Text="Login" HorizontalOptions="Center"/>
+
+	<StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+			<Label Text ="Not a BackPacker yet?" />
+			<Label x:Name="SignUpLabel" Text="Sign Up" TextColor="Blue"/>
+	</StackLayout>
+ </StackLayout>	
+</AbsoluteLayout>  
 </ContentPage>
