@@ -15,9 +15,9 @@
 				<Label HorizontalOptions="Center" FontSize="25" Text = "Sign Up"/>
 			</StackLayout>
  <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" VerticalOptions="Center">
-		<Entry Placeholder="Enter username" Margin="20,0,20,0" HorizontalOptions="FillAndExpand"/>
-		<Entry Placeholder="Enter password" Margin="20,0,20,0" IsPassword="true" HorizontalOptions="FillAndExpand"/>
-		<Button x:Name="signupButton" Text="Sign Up" HorizontalOptions="Center"/>
+		<Entry Text="{Binding SignupEmail}"  Placeholder="Enter username" Margin="20,0,20,0" HorizontalOptions="FillAndExpand"/>
+		<Entry Text="{Binding SignupPassword}" Placeholder="Enter password" Margin="20,0,20,0" IsPassword="true" HorizontalOptions="FillAndExpand"/>
+		<Button x:Name="signupButton" Text="Sign Up" HorizontalOptions="Center" Command="{Binding SignUpButtonAction}"/>
  </StackLayout>	
 
 		

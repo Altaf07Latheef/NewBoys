@@ -20,7 +20,7 @@
 			<Label Text ="Not a BackPacker yet?" />
                 <Label x:Name="SignUpLabel" Text="Sign Up" TextColor="Blue">
                     <Label.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding}"/>
+                        <TapGestureRecognizer Command="{Binding SignUpClickAction}" NumberOfTapsRequired="1"/>
                     </Label.GestureRecognizers>
                 </Label>
             </StackLayout>
